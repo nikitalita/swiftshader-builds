@@ -5,7 +5,7 @@ on: [push, pull_request]
 env:
   # Ideally use a commit that's verified to work well elsewhere (Arch
   # swiftshader-git package, for example)
-  COMMIT: 44660405ea6ce02683617cc483aecc080499aa27
+  COMMIT: 7997cbc34bb2d5db771f0d0b2497aeb665168ed2
 
 # Mostly just copied from here, with ES1 disabled:
 # https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=swiftshader-git
@@ -109,7 +109,7 @@ jobs:
         install -m644 -t install/share/vulkan/icd.d/ \
           build/Linux/vk_swiftshader_icd.json
         sed 's#./libvk_swiftshader.so#../../../lib/libvk_swiftshader.so#' \
-          -i install/share/vulkan/icd.d/vk_swiftshader_icd.json
+          -i install/share/vulkan/icd.d/7997cbc34bb2d5db771f0d0b2497aeb665168ed2
     - name: Upload artifacts
       uses: actions/upload-artifact@v1
       with:
